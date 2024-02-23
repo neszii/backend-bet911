@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="style.css">
+	<title>ระบบจัดการหลังบ้าน</title>
+
+  <!-- import css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstarp -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-1.13.8/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/r-2.5.0/datatables.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-1.13.8/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/r-2.5.0/datatables.min.js"></script>
+
+
+  <!-- Icon CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand" style="color: var(--blue)"><img src="/img/bet911.png" width="52px"> &nbsp;BACKEND&nbsp;BET911</a>
+      		<ul class="side-menu">
+			 <li><a href="#"><i class="fa-solid fa-ranking-star icon"></i></i> DASHBOARD</a></li>
+		  		<li class="divider" data-text="Member">Member</li>
+				<li>
+			 	<a href="#"><i class="fa-solid fa-id-card icon"></i> สมาชิก <i class='bx bx-chevron-right icon-right' ></i></a>
+			  	<ul class="side-dropdown">
+					<li><a href="#">รายงานสมาชิก</a></li>
+					<li><a href="#">รายงานสมาชิกใหม่</a></li>
+					<li><a href="#">ข้อมูลสมาชิกย้อนหลัง</a></li>
+					<li><a href="#">สมาชิกรับโปรโมชั่น</a></li>
+				</ul>
+		   		</li>
+     		 <li>
+        <a href="#"><i class="fa-solid fa-money-bill-transfer icon"></i> ฝาก <i class='bx bx-chevron-right icon-right' ></i></a>
+			<ul class="side-dropdown">
+          		<li><a href="#">ภาพรวมความเร็ว</a></li>
+				<li><a href="#">รอยืนยันการฝาก</a></li>
+				<li><a href="#">รายการฝากด่วน</a></li>
+				<li><a href="#">รอยืนยันการฝาก</a></li>
+          		<li><a href="#">รายการ SMS</a></li>
+          		<li><a href="#">รายการ All SMS</a></li>
+          		<li><a href="#">INTERNET BANKING</a></li>
+        </ul>
+			</li>
+      <li>
+        <a href="#"><i class="fa-solid fa-money-bill-trend-up icon"></i> ถอน <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+          <li><a href="#">ภาพรวมความเร็ว</a></li>
+          <li><a href="#">โอนเงิน</a></li>
+          <li><a href="#">รอถอนออกจากธนาคาร</a></li>
+          <li><a href="#">รอถอนออกจากธนาคาร</a></li>
+          <li><a href="#">รายการถอน</a></li>
+          <li><a href="#">ธุรกรรมไม่จับคู่</a></li>
+          <li><a href="#">รายงานเงินเข้าออกบัญชี</a></li>
+          <li><a href="#">รายการถอน SMS</a></li>
+		  <li><a href="#">INTERNET BANKING</a></li>
+				</ul>
+			</li>
+      <li>
+				<a href="#"><i class="fa-solid fa-file-invoice-dollar icon"></i> รายงาน <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">โอนยอด</a></li>
+					<li><a href="#">รายงานวินลอช</a></li>
+					<li><a href="#">รายงาน-แพ้ชนะ</a></li>
+				</ul>
+			</li>
+      <li class="divider" data-text="Promotion">Promotion</li>
+      <li>
+				<a href="#"><i class="fa-solid fa-gift icon"></i> จัดโปรโมชั่น <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+          <li><a href="#">รายการคูปอง</a></li>
+					<li><a href="#">รายการคูปอง Folder</a></li>
+					<li><a href="#">สร้างคูปอง</a></li>
+        </ul>
+			</li>
+      <li>
+				<a href="#"><i class="fa-solid fa-calendar-days icon"></i> จัดการกิจกรรม <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+          <li><a href="#">โปรโมชั่น</a></li>
+          <li><a href="#">คืนยอดเสีย</a></li>
+          <li><a href="#">ฉลากกินแบ่ง</a></li>
+          <li><a href="#">ทายผลฟุตบอล</a></li>
+        </ul>
+			</li>
+      <li class="divider" data-text="Config">Config</li>
+      <li>
+				<a href="#"><i class="fa-solid fa-book icon"></i> บทความ SEO <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+          <li><a href="#">รายการข่าวกีฬา</a></li>
+          <li><a href="#">สร้างข่าวกีฬา</a></li>
+          <li><a href="#">บทความ</a></li>
+          <li><a href="#">สร้างบทความ</a></li>
+        </ul>
+			</li>
+      <li>
+				<a href="#"><i class="fa-solid fa-robot icon"></i> บอทธนาคาร <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+          <li><a href="#">คอนฟิก</a></li>
+          <li><a href="#">รายการธนาคาร</a></li>
+          <li><a href="#">สร้างธนาคาร</a></li>
+          <li><a href="#">บัญชีฝาก</a></li>
+          <li><a href="#">บัญชีถอน</a></li>
+          <li><a href="#">บัญชีพัก</a></li>
+        </ul>
+			</li>
+      <li class="divider" data-text="Setting">Setting</li>
+      <li>
+				<a href="#"><i class="fa-solid fa-user-gear icon"></i> ตั้งค่าผู้ดูแลระบบ <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">รายการแอดมิน</a></li>
+					<li><a href="#">สร้างแอดมิน</a></li>
+					<li><a href="#">สถิติฝากถอนแอดมิน</a></li>
+				</ul>
+			</li>
+      <li>
+				<a href="#"><i class="fa-solid fa-handshake icon"></i> ตั้งค่าพันธมิตร <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="#">รายการเอเย่น</a></li>
+					<li><a href="#">สร้างเอเย่น</a></li>
+					<li><a href="#">ข้อมูลเอเย่นย้อนหลัง</a></li>
+          <li><a href="#">รายการคอมมิชชั่น</a></li>
+          <li><a href="#">สร้างคอมมิชชั่น</a></li>
+				</ul>
+			</li>
+      <li>
+				<a href="#"><i class="fa-solid fa-right-from-bracket icon"></i></i> Logout </a>
+      </li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<!-- Slide Menu -->
+      <div class="elementor-widget-container toggle-sidebar">
+        <a class="zd1s2-trigger">
+          <div class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+          </div>
+        </a>
+      </div>
+    <!-- End Slide Menu -->  
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="ค้นหา...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+			<!-- <a href="#" class="nav-link">
+				<i class='bx bxs-bell icon' ></i>
+				<span class="badge">26</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon' ></i>
+				<span class="badge">14</span>
+			</a> -->
+      <div data-bs-toggle="tooltip" data-bs-placement="bottom" title="สถานะ : ผู้ดูแลระบบ">
+        <i class="fa-solid fa-user-shield text-success"></i> 
+          <span id="name_user">ADMIN</span>
+      </div>
+			<div class="profile">
+				<img src="/img/user.png" width="36px">
+				<ul class="profile-link">
+					<li><a href="#"><i class="fa-solid fa-user text-success"></i> โปรไฟล์</a></li>
+					<li><a href="#"><i class="fa-solid fa-gear text-primary"></i> ตั้งค่าระบบ</a></li>
+					<li><a href="#"><i class="fa-solid fa-right-from-bracket text-danger"></i> ออกจากระบบ</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<h1 class="title">หน้าแรก</h1>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="script.js"></script>
+</body>
+</html>
